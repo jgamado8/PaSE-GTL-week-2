@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .intro {
+        margin: 10px 0px 0px;
+      }
+      .get-date {
+        /* margin: 10px 0px; */
+        background-color: #c5c5c5;
+        color: #000000;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-color: lightgrey;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        margin: 100px;
+        border-radius: 2%;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      .card-header {
+        width: 100%;
+        height: 40%;
+        background-color: cyan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1>
+            Hello World!
+          </h1>
+        </div>
+        <div class="card-content">
+          <p class="intro">Please click button below to toggle date</p>
+          <button id="btn">GET DATE</button>
+          <p id="get-date"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector("#btn");
+      const date = document.querySelector("#get-date");
+      btn.addEventListener("click", () => {
+        date.textContent = `Today is ${new Date()}`;
+      });
+    </script>
+  </body>
+</html>
